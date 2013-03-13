@@ -19,6 +19,8 @@
 		22FF673416F0E1D500F1B5DE /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22FF673216F0E1D500F1B5DE /* MainStoryboard_iPhone.storyboard */; };
 		22FF673716F0E1D500F1B5DE /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22FF673516F0E1D500F1B5DE /* MainStoryboard_iPad.storyboard */; };
 		22FF673A16F0E1D500F1B5DE /* SHViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22FF673916F0E1D500F1B5DE /* SHViewController.m */; };
+		22FF674516F0E26100F1B5DE /* SHAccountManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 22FF674416F0E26100F1B5DE /* SHAccountManager.m */; };
+		43C55B8B6554413A85BEB080 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E3391733375A45009FF6F3B8 /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +41,11 @@
 		22FF673616F0E1D500F1B5DE /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
 		22FF673816F0E1D500F1B5DE /* SHViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SHViewController.h; sourceTree = "<group>"; };
 		22FF673916F0E1D500F1B5DE /* SHViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SHViewController.m; sourceTree = "<group>"; };
+		22FF674116F0E24E00F1B5DE /* SHApplication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHApplication.h; sourceTree = "<group>"; };
+		22FF674316F0E26100F1B5DE /* SHAccountManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHAccountManager.h; sourceTree = "<group>"; };
+		22FF674416F0E26100F1B5DE /* SHAccountManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHAccountManager.m; sourceTree = "<group>"; };
+		C09E76213D024B8897E40BB9 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
+		E3391733375A45009FF6F3B8 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,6 +56,7 @@
 				22FF671B16F0E1D500F1B5DE /* UIKit.framework in Frameworks */,
 				22FF671D16F0E1D500F1B5DE /* Foundation.framework in Frameworks */,
 				22FF671F16F0E1D500F1B5DE /* CoreGraphics.framework in Frameworks */,
+				43C55B8B6554413A85BEB080 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,9 +66,11 @@
 		22FF670E16F0E1D400F1B5DE = {
 			isa = PBXGroup;
 			children = (
+				22FF674216F0E26100F1B5DE /* SHAccountManager */,
 				22FF672016F0E1D500F1B5DE /* SHAccountManagerExample */,
 				22FF671916F0E1D500F1B5DE /* Frameworks */,
 				22FF671816F0E1D500F1B5DE /* Products */,
+				C09E76213D024B8897E40BB9 /* Pods.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -78,6 +88,7 @@
 				22FF671A16F0E1D500F1B5DE /* UIKit.framework */,
 				22FF671C16F0E1D500F1B5DE /* Foundation.framework */,
 				22FF671E16F0E1D500F1B5DE /* CoreGraphics.framework */,
+				E3391733375A45009FF6F3B8 /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -85,6 +96,7 @@
 		22FF672016F0E1D500F1B5DE /* SHAccountManagerExample */ = {
 			isa = PBXGroup;
 			children = (
+				22FF674016F0E24300F1B5DE /* Settings */,
 				22FF672916F0E1D500F1B5DE /* SHAppDelegate.h */,
 				22FF672A16F0E1D500F1B5DE /* SHAppDelegate.m */,
 				22FF673216F0E1D500F1B5DE /* MainStoryboard_iPhone.storyboard */,
@@ -110,6 +122,23 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		22FF674016F0E24300F1B5DE /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				22FF674116F0E24E00F1B5DE /* SHApplication.h */,
+			);
+			name = Settings;
+			sourceTree = "<group>";
+		};
+		22FF674216F0E26100F1B5DE /* SHAccountManager */ = {
+			isa = PBXGroup;
+			children = (
+				22FF674316F0E26100F1B5DE /* SHAccountManager.h */,
+				22FF674416F0E26100F1B5DE /* SHAccountManager.m */,
+			);
+			path = SHAccountManager;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -120,6 +149,7 @@
 				22FF671316F0E1D500F1B5DE /* Sources */,
 				22FF671416F0E1D500F1B5DE /* Frameworks */,
 				22FF671516F0E1D500F1B5DE /* Resources */,
+				28B40850E3D948F788499130 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -173,6 +203,23 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		28B40850E3D948F788499130 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		22FF671316F0E1D500F1B5DE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -181,6 +228,7 @@
 				22FF672716F0E1D500F1B5DE /* main.m in Sources */,
 				22FF672B16F0E1D500F1B5DE /* SHAppDelegate.m in Sources */,
 				22FF673A16F0E1D500F1B5DE /* SHViewController.m in Sources */,
+				22FF674516F0E26100F1B5DE /* SHAccountManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -274,10 +322,12 @@
 		};
 		22FF673E16F0E1D500F1B5DE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C09E76213D024B8897E40BB9 /* Pods.xcconfig */;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SHAccountManagerExample/SHAccountManagerExample-Prefix.pch";
 				INFOPLIST_FILE = "SHAccountManagerExample/SHAccountManagerExample-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -285,10 +335,12 @@
 		};
 		22FF673F16F0E1D500F1B5DE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C09E76213D024B8897E40BB9 /* Pods.xcconfig */;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SHAccountManagerExample/SHAccountManagerExample-Prefix.pch";
 				INFOPLIST_FILE = "SHAccountManagerExample/SHAccountManagerExample-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -313,6 +365,7 @@
 				22FF673F16F0E1D500F1B5DE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

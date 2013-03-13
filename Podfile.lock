@@ -1,0 +1,35 @@
+PODS:
+  - AFNetworking (1.1.0)
+  - AFOAuth1Client (0.1.1):
+    - AFNetworking (>= 0.9)
+  - BlocksKit (1.8.1):
+    - libffi
+  - libffi (3.0.11)
+  - LUKeychainAccess (1.0.1)
+  - NSData+Base64 (1.0.0)
+  - OAuthCore (0.0.1):
+    - NSData+Base64
+  - TWReverseAuth (0.1.0):
+    - LUKeychainAccess (~> 1.0.1)
+    - OAuthCore (~> 0.0.1)
+
+DEPENDENCIES:
+  - AFOAuth1Client
+  - BlocksKit
+  - TWReverseAuth (from `https://github.com/seivan/TWReverseAuth.git`)
+
+EXTERNAL SOURCES:
+  TWReverseAuth:
+    :git: https://github.com/seivan/TWReverseAuth.git
+
+SPEC CHECKSUMS:
+  AFNetworking: 761a418233d280c1e0580bcb76ff9cb4c3073d17
+  AFOAuth1Client: 5a3a409fc438cd5b7a770e7a3933f28ddbb8a4ed
+  BlocksKit: 18102744fd7c44b54f1e54ce6ffe9258bcb5df81
+  libffi: 8a1d9ba43c0c84b546b42c6f742714e73aa07ae1
+  LUKeychainAccess: 6ba22b2e1eec24f9f2fc9c6a9087d5524a58b1a2
+  NSData+Base64: 8b910cb8a64f45daec6fb15936c36a9a911c57ca
+  OAuthCore: 4164eec5e28c68f794953446e68f91054ffe570c
+  TWReverseAuth: 2e5c5589f5967af50bbccde9c149a74a24b2465c
+
+COCOAPODS: 0.17.0.rc3
