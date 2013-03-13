@@ -30,6 +30,6 @@ SPEC CHECKSUMS:
   LUKeychainAccess: 6ba22b2e1eec24f9f2fc9c6a9087d5524a58b1a2
   NSData+Base64: 8b910cb8a64f45daec6fb15936c36a9a911c57ca
   OAuthCore: 4164eec5e28c68f794953446e68f91054ffe570c
-  TWReverseAuth: 52ff1df011dbb90daabfa056479d2ee9bad4617a
+  TWReverseAuth: d0e6e2d534377f1832c2553ff4e9d677d549e45a
 
 COCOAPODS: 0.17.0.rc3
