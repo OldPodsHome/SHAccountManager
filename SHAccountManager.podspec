@@ -14,12 +14,12 @@ Pod::Spec.new do |s|
   s.author       = { "Seivan Heidari" => "seivan.heidari@icloud.com" }
 
   s.source       = { :git => "https://github.com/seivan/SHAccountManager.git" }#, :tag => '0.1.0'}
-  s.platform     = :ios, '5.0'
+  s.platform     = :ios, '6.0'
 
 
   s.source_files = 'SHAccountManager/**/*.{h,m}'
   s.frameworks = 'Social', 'Accounts'
   s.requires_arc = true
-  s.dependency 'AFOAuth1Client'
-  s.dependency 'TWReverseAuth'
+  s.dependency 'AFOAuth1Client', '~>0.1.1'
+  s.dependency 'TWReverseAuth', '~>0.1.0'
 end
