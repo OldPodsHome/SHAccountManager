@@ -6,7 +6,7 @@
 //  Copyright (c) 2013 Seivan Heidari. All rights reserved.
 //
 
-
+#import "SHAccountConsts.h"
 #import <Accounts/Accounts.h>
 
 
@@ -25,4 +25,7 @@ typedef void(^SHAccountErrorHandler)(NSError * error);
 -(void)authenticateWithTwitterForAccount:(SHTwitterAuthenticationHandler)theAccountRequirementBlock
                                onSuccess:(void (^)(NSDictionary * params))onSuccessBlock
                                onFailure:(SHAccountErrorHandler)onFailureBlock;
++ (NSString *)consumerKey;
++ (NSString *)consumerSecret;
+
 @end

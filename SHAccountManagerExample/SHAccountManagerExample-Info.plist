@@ -45,6 +45,10 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>TwitterConsumerKey</key>
+	<string>====PLACE-YOUR-API-KEY===</string>
+	<key>TwitterConsumerSecert</key>
+	<string>====PLACE-YOUR-API-SECRET===</string>
 	<key>CFBundleURLTypes</key>
 	<array>
 		<dict>
