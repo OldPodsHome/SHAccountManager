@@ -43,6 +43,7 @@
 		22FF673916F0E1D500F1B5DE /* SHViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SHViewController.m; sourceTree = "<group>"; };
 		22FF674316F0E26100F1B5DE /* SHAccountManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHAccountManager.h; sourceTree = "<group>"; };
 		22FF674416F0E26100F1B5DE /* SHAccountManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHAccountManager.m; sourceTree = "<group>"; };
+		770CED9216F8A50800A6DF7F /* SHAccountConsts.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SHAccountConsts.h; sourceTree = "<group>"; };
 		C09E76213D024B8897E40BB9 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
 		E3391733375A45009FF6F3B8 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -125,6 +126,7 @@
 			children = (
 				22FF674316F0E26100F1B5DE /* SHAccountManager.h */,
 				22FF674416F0E26100F1B5DE /* SHAccountManager.m */,
+				770CED9216F8A50800A6DF7F /* SHAccountConsts.h */,
 			);
 			path = SHAccountManager;
 			sourceTree = "<group>";

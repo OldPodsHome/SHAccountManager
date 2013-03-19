@@ -6,13 +6,9 @@
 //  Copyright (c) 2013 Seivan Heidari. All rights reserved.
 //
 
-#define TW_CONSUMER_KEY @"TwitterConsumerKey"
-#define TW_CONSUMER_SECRET @"TwitterConsumerSecert"
-
+#import "SHAccountConsts.h"
 #import <Accounts/Accounts.h>
 
-static NSString *gTWConsumerKey;
-static NSString *gTWConsumerSecret;
 
 @interface SHAccountManager : NSObject
 typedef void(^SHTwitterAccountPickerHandler)(ACAccount * chosenAccount);

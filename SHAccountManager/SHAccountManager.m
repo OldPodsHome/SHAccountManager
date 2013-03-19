@@ -11,6 +11,9 @@
 #import "TWAPIManager.h"
 #import "TWAppCredentialStore.h"
 
+static NSString *gTWConsumerKey;
+static NSString *gTWConsumerSecret;
+
 @interface SHAccountManager ()
 -(void)logErrorCode:(NSError *)theErrorCode;
 -(void)requestAccessToTwitterAccounts:(ACAccountStoreRequestAccessCompletionHandler)onCompletionBlock;
@@ -123,10 +126,8 @@
 -(void)authenticateWithTwitterForAccount:(SHTwitterAuthenticationHandler)theAccountRequirementBlock
                                onSuccess:(void (^)(NSDictionary * params))onSuccessBlock
                                onFailure:(SHAccountErrorHandler)onFailureBlock; {
-  
-
-  
-  if([TWAPIManager isLocalTwitterAccountAvailable]) {
+    
+  if([self isLocalTwitterAccountAvailable]) {
     
     [self requestAccessToTwitterAccounts:^(BOOL granted, NSError *error) {
       if(granted) theAccountRequirementBlock(self.accountsTwitter, ^(ACAccount * theChosenAccount){
@@ -155,10 +156,13 @@
   AFOAuth1Client *  twitterClient = [[AFOAuth1Client alloc]
                                      initWithBaseURL:[NSURL URLWithString:@"https://api.twitter.com/"]
                                      key:self.twitterConsumerKey secret:self.twitterConsumerSecret];
-  
+    
+  // callback used by app delegate to return from Twitter oauth/authorize
+  // the success is used by AFOAuth1Client
+  NSString *callbackURL = [NSString stringWithFormat:@"%@://success", TWITTER_URL_SCHEME];
   [twitterClient authorizeUsingOAuthWithRequestTokenPath:@"oauth/request_token"
                                    userAuthorizationPath:@"oauth/authorize"
-                                             callbackURL:[NSURL URLWithString:@"af-twitter://success"]
+                                             callbackURL:[NSURL URLWithString:callbackURL]
                                          accessTokenPath:@"oauth/access_token"
                                             accessMethod:@"POST" success:^(AFOAuth1Token *accessToken) {
 
@@ -231,6 +235,13 @@
     NSAssert([gTWConsumerSecret length] > 0, @"You must enter your consumer secret into Info.plist with the key TwitterConsumerKeySecret.");
     
     return gTWConsumerSecret;
+}
+
+-(BOOL)isLocalTwitterAccountAvailable{
+    ACAccountStore *accountStore = [ACAccountStore new];
+    ACAccountType *twitterAccountType = [accountStore accountTypeWithAccountTypeIdentifier:ACAccountTypeIdentifierTwitter];
+    NSArray *twitterAccounts = [accountStore accountsWithAccountType:twitterAccountType];
+    return twitterAccounts.count > 0;
 }
 
 
