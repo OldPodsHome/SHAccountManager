@@ -41,7 +41,6 @@
 		22FF673616F0E1D500F1B5DE /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
 		22FF673816F0E1D500F1B5DE /* SHViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SHViewController.h; sourceTree = "<group>"; };
 		22FF673916F0E1D500F1B5DE /* SHViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SHViewController.m; sourceTree = "<group>"; };
-		22FF674116F0E24E00F1B5DE /* SHApplication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHApplication.h; sourceTree = "<group>"; };
 		22FF674316F0E26100F1B5DE /* SHAccountManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHAccountManager.h; sourceTree = "<group>"; };
 		22FF674416F0E26100F1B5DE /* SHAccountManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHAccountManager.m; sourceTree = "<group>"; };
 		C09E76213D024B8897E40BB9 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
@@ -96,7 +95,6 @@
 		22FF672016F0E1D500F1B5DE /* SHAccountManagerExample */ = {
 			isa = PBXGroup;
 			children = (
-				22FF674016F0E24300F1B5DE /* Settings */,
 				22FF672916F0E1D500F1B5DE /* SHAppDelegate.h */,
 				22FF672A16F0E1D500F1B5DE /* SHAppDelegate.m */,
 				22FF673216F0E1D500F1B5DE /* MainStoryboard_iPhone.storyboard */,
@@ -120,14 +118,6 @@
 				22FF673016F0E1D500F1B5DE /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		22FF674016F0E24300F1B5DE /* Settings */ = {
-			isa = PBXGroup;
-			children = (
-				22FF674116F0E24E00F1B5DE /* SHApplication.h */,
-			);
-			name = Settings;
 			sourceTree = "<group>";
 		};
 		22FF674216F0E26100F1B5DE /* SHAccountManager */ = {

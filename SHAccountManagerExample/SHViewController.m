@@ -19,7 +19,8 @@
 
 -(void)viewDidLoad; {
   [super viewDidLoad];
-  [SHAccountManager registerTwitterAppKey:kTwitterKey andAppSecret:kTwitterSecret];
+    [SHAccountManager registerTwitterAppKey:[SHAccountManager consumerKey]
+                               andAppSecret:[SHAccountManager consumerSecret]];
   
   self.loader = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
   self.loader.color = UIColor.redColor;

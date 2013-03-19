@@ -207,6 +207,31 @@
   return consumerSecret;
 }
 
+// OBFUSCATE YOUR KEYS!
++ (NSString *)consumerKey
+{
+    if (!gTWConsumerKey) {
+        NSBundle* bundle = [NSBundle mainBundle];
+        gTWConsumerKey = bundle.infoDictionary[TW_CONSUMER_KEY];
+    }
+    
+    NSAssert([gTWConsumerKey length] > 0, @"You must enter your consumer key into Info.plist with the key TwitterConsumerKey.");
+    
+    return gTWConsumerKey;
+}
+
+// OBFUSCATE YOUR KEYS!
++ (NSString *)consumerSecret
+{
+    if (!gTWConsumerSecret) {
+        NSBundle* bundle = [NSBundle mainBundle];
+        gTWConsumerSecret = bundle.infoDictionary[TW_CONSUMER_SECRET];
+    }
+    
+    NSAssert([gTWConsumerSecret length] > 0, @"You must enter your consumer secret into Info.plist with the key TwitterConsumerKeySecret.");
+    
+    return gTWConsumerSecret;
+}
 
 
 -(void)logErrorCode:(NSError *)theErrorCode; {
