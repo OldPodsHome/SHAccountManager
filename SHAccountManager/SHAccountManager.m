@@ -105,7 +105,7 @@
                                      NSString *responseStr = [[NSString alloc]
                                                               initWithData:responseData
                                                               encoding:NSUTF8StringEncoding];
-                                     NSLog(@"%@", responseStr);
+
                                      NSDictionary * params = [self paramsFromQueryString:responseStr];
                                      
                                      onSuccessBlock(params);
@@ -126,28 +126,39 @@
   
 
   
-  if([TWAPIManager isLocalTwitterAccountAvailable]) {
-    
-    [self requestAccessToTwitterAccounts:^(BOOL granted, NSError *error) {
-      if(granted) theAccountRequirementBlock(self.accountsTwitter, ^(ACAccount * theChosenAccount){
-        [self requestReverseOAuthWithAccount:theChosenAccount onSuccess:^(NSDictionary *parameters) {
-          onSuccessBlock(parameters);
-        } onFailure:onFailureBlock];
-      });
-      
-      else onFailureBlock(error);
-      
-    }];
-  }
-  else {
+//  if([TWAPIManager isLocalTwitterAccountAvailable]) {
+//    
+//    [self requestAccessToTwitterAccounts:^(BOOL granted, NSError *error) {
+//      if(granted) theAccountRequirementBlock(self.accountsTwitter, ^(ACAccount * theChosenAccount){
+//        [self requestReverseOAuthWithAccount:theChosenAccount onSuccess:^(NSDictionary *parameters) {
+//          onSuccessBlock(parameters);
+//        } onFailure:onFailureBlock];
+//      });
+//      
+//      else onFailureBlock(error);
+//      
+//    }];
+//  }
+//  else {
     [self requestSignedOAuthToTwitterOnSuccess:^(ACAccount *theChosenAccount) {
-      [self authenticateWithTwitterForAccount:^(NSArray *accounts, SHTwitterAccountPickerHandler pickAccount) {
-        pickAccount(theChosenAccount);
+      [self requestAccessToTwitterAccounts:^(BOOL granted, NSError *error) {
+        if(granted) theAccountRequirementBlock(self.accountsTwitter, ^(ACAccount * theChosenAccount){
+          [self requestReverseOAuthWithAccount:theChosenAccount onSuccess:^(NSDictionary *parameters) {
+            onSuccessBlock(parameters);
+          } onFailure:onFailureBlock];
+        });
         
-      } onSuccess:onSuccessBlock onFailure:onFailureBlock ];
+        else onFailureBlock(error);
+        
+      }];
+
+//      [self authenticateWithTwitterForAccount:^(NSArray *accounts, SHTwitterAccountPickerHandler pickAccount) {
+//        pickAccount(theChosenAccount);
+//        
+//      } onSuccess:onSuccessBlock onFailure:onFailureBlock ];
       
     } onFailure:onFailureBlock];
-  }
+//  }
 }
 
 -(void)requestSignedOAuthToTwitterOnSuccess:(SHTwitterAccountPickerHandler)onSuccessBlock

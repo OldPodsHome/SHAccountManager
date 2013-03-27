@@ -1,4 +1,6 @@
 PODS:
+  - AFLinkedInOAuth1Client (0.0.2):
+    - AFOAuth1Client (>= 0.1.0)
   - AFNetworking (1.1.0)
   - AFOAuth1Client (0.1.1):
     - AFNetworking (>= 0.9)
@@ -14,6 +16,7 @@ PODS:
     - OAuthCore (~> 0.0.1)
 
 DEPENDENCIES:
+  - AFLinkedInOAuth1Client
   - AFOAuth1Client
   - BlocksKit
   - TWReverseAuth (from `https://github.com/seivan/TWReverseAuth.git`)
@@ -23,6 +26,7 @@ EXTERNAL SOURCES:
     :git: https://github.com/seivan/TWReverseAuth.git
 
 SPEC CHECKSUMS:
+  AFLinkedInOAuth1Client: 3428ee51263c8ccc740f20174b65df8b414367ce
   AFNetworking: 761a418233d280c1e0580bcb76ff9cb4c3073d17
   AFOAuth1Client: 5a3a409fc438cd5b7a770e7a3933f28ddbb8a4ed
   BlocksKit: 18102744fd7c44b54f1e54ce6ffe9258bcb5df81

@@ -8,11 +8,29 @@
 
 #import "SHAppDelegate.h"
 #import "AFOAuth1Client.h"
+#import "SHOmniAuth.h"
+#import "SHOmniAuthTwitter.h"
+#import "SHOmniAuthLinkedIn.h"
 
 @implementation SHAppDelegate
 
 -(BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions; {
   // Override point for customization after application launch.
+  [SHOmniAuth registerProvidersWith:^(SHOmniAuthProviderBlock provider) {
+    provider(SHOmniAuthLinkedIn.provider,
+             @"xNyRENCoCU14DzynxzPcQeoOyVGktxQSNh9ZIf-Bu_wBjxBJC7ZksXJVpMONbnt1",
+             @"fw7WYUDeEZM-_kk7lHL_4b3-ErAWOmOLoqsev9RvRh8iIc_mfuQ2ULizrv5KO6TL",
+             nil,
+             @"oauth-twitter://success");
+    provider(SHOmniAuthTwitter.provider,
+             @"sdVIJaUkQKn7Xx9rmEhU5g",
+             @"iLqzBr6B8Y4w6KIYqAsxSReF7DHcSQACh8VztrLgY",
+             nil,
+             @"oauth-linkedin://success");
+    
+  }];
+  
+
   return YES;
 }
 -(BOOL)application:(UIApplication *)application
@@ -20,6 +38,7 @@
  sourceApplication:(NSString *)sourceApplication
         annotation:(id)annotation; {
 
+  NSLog(@"%@ - %@ - %@ -%@", application, url, sourceApplication, annotation);
     NSNotification *notification = [NSNotification notificationWithName:kAFApplicationLaunchedWithURLNotification object:nil userInfo:[NSDictionary dictionaryWithObject:url forKey:kAFApplicationLaunchOptionsURLKey]];
     [[NSNotificationCenter defaultCenter] postNotification:notification];
   

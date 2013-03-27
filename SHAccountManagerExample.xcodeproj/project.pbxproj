@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		22AF35F116FA6B93005CBB62 /* SHAccount.m in Sources */ = {isa = PBXBuildFile; fileRef = 22AF35F016FA6B93005CBB62 /* SHAccount.m */; };
+		22AF35F416FA6BA4005CBB62 /* SHAccountStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 22AF35F316FA6BA4005CBB62 /* SHAccountStore.m */; };
+		22AF35F716FA6BB7005CBB62 /* SHAccountType.m in Sources */ = {isa = PBXBuildFile; fileRef = 22AF35F616FA6BB7005CBB62 /* SHAccountType.m */; };
+		22AF35FA16FA6BC9005CBB62 /* SHAccountCredential.m in Sources */ = {isa = PBXBuildFile; fileRef = 22AF35F916FA6BC9005CBB62 /* SHAccountCredential.m */; };
+		22AF35FD16FA744C005CBB62 /* SHSampleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22AF35FC16FA744C005CBB62 /* SHSampleViewController.m */; };
+		22AF360316FE0233005CBB62 /* SHOmniAuth.m in Sources */ = {isa = PBXBuildFile; fileRef = 22AF360216FE0232005CBB62 /* SHOmniAuth.m */; };
+		22AF360616FE14BA005CBB62 /* SHOmniAuthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22AF360516FE14BA005CBB62 /* SHOmniAuthViewController.m */; };
+		22AF360916FE5369005CBB62 /* SHRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 22AF360816FE5368005CBB62 /* SHRequest.m */; };
+		22AF360F16FE6492005CBB62 /* SHOmniAuthLinkedIn.m in Sources */ = {isa = PBXBuildFile; fileRef = 22AF360E16FE6492005CBB62 /* SHOmniAuthLinkedIn.m */; };
+		22AF361216FE841F005CBB62 /* SHOmniAuthTwitter.m in Sources */ = {isa = PBXBuildFile; fileRef = 22AF361116FE841E005CBB62 /* SHOmniAuthTwitter.m */; };
 		22FF671B16F0E1D500F1B5DE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22FF671A16F0E1D500F1B5DE /* UIKit.framework */; };
 		22FF671D16F0E1D500F1B5DE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22FF671C16F0E1D500F1B5DE /* Foundation.framework */; };
 		22FF671F16F0E1D500F1B5DE /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22FF671E16F0E1D500F1B5DE /* CoreGraphics.framework */; };
@@ -24,6 +34,28 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2220766F1702E2D400C1FEDD /* SHOmniAuthProviderPrivates.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SHOmniAuthProviderPrivates.h; sourceTree = "<group>"; };
+		22AF35EF16FA6B93005CBB62 /* SHAccount.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHAccount.h; sourceTree = "<group>"; };
+		22AF35F016FA6B93005CBB62 /* SHAccount.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHAccount.m; sourceTree = "<group>"; };
+		22AF35F216FA6BA4005CBB62 /* SHAccountStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHAccountStore.h; sourceTree = "<group>"; };
+		22AF35F316FA6BA4005CBB62 /* SHAccountStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHAccountStore.m; sourceTree = "<group>"; };
+		22AF35F516FA6BB7005CBB62 /* SHAccountType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHAccountType.h; sourceTree = "<group>"; };
+		22AF35F616FA6BB7005CBB62 /* SHAccountType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHAccountType.m; sourceTree = "<group>"; };
+		22AF35F816FA6BC9005CBB62 /* SHAccountCredential.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHAccountCredential.h; sourceTree = "<group>"; };
+		22AF35F916FA6BC9005CBB62 /* SHAccountCredential.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHAccountCredential.m; sourceTree = "<group>"; };
+		22AF35FB16FA744C005CBB62 /* SHSampleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHSampleViewController.h; sourceTree = "<group>"; };
+		22AF35FC16FA744C005CBB62 /* SHSampleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHSampleViewController.m; sourceTree = "<group>"; };
+		22AF360116FE0230005CBB62 /* SHOmniAuth.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHOmniAuth.h; sourceTree = "<group>"; };
+		22AF360216FE0232005CBB62 /* SHOmniAuth.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHOmniAuth.m; sourceTree = "<group>"; };
+		22AF360416FE14BA005CBB62 /* SHOmniAuthViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHOmniAuthViewController.h; sourceTree = "<group>"; };
+		22AF360516FE14BA005CBB62 /* SHOmniAuthViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHOmniAuthViewController.m; sourceTree = "<group>"; };
+		22AF360716FE5368005CBB62 /* SHRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHRequest.h; sourceTree = "<group>"; };
+		22AF360816FE5368005CBB62 /* SHRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHRequest.m; sourceTree = "<group>"; };
+		22AF360A16FE57D8005CBB62 /* SHOmniAuthProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHOmniAuthProvider.h; sourceTree = "<group>"; };
+		22AF360D16FE6491005CBB62 /* SHOmniAuthLinkedIn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHOmniAuthLinkedIn.h; sourceTree = "<group>"; };
+		22AF360E16FE6492005CBB62 /* SHOmniAuthLinkedIn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHOmniAuthLinkedIn.m; sourceTree = "<group>"; };
+		22AF361016FE841D005CBB62 /* SHOmniAuthTwitter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHOmniAuthTwitter.h; sourceTree = "<group>"; };
+		22AF361116FE841E005CBB62 /* SHOmniAuthTwitter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHOmniAuthTwitter.m; sourceTree = "<group>"; };
 		22FF671716F0E1D500F1B5DE /* SHAccountManagerExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SHAccountManagerExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		22FF671A16F0E1D500F1B5DE /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		22FF671C16F0E1D500F1B5DE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -67,7 +99,6 @@
 			isa = PBXGroup;
 			children = (
 				22FF674216F0E26100F1B5DE /* SHAccountManager */,
-				22FF672016F0E1D500F1B5DE /* SHAccountManagerExample */,
 				22FF671916F0E1D500F1B5DE /* Frameworks */,
 				22FF671816F0E1D500F1B5DE /* Products */,
 				C09E76213D024B8897E40BB9 /* Pods.xcconfig */,
@@ -103,10 +134,14 @@
 				22FF673516F0E1D500F1B5DE /* MainStoryboard_iPad.storyboard */,
 				22FF673816F0E1D500F1B5DE /* SHViewController.h */,
 				22FF673916F0E1D500F1B5DE /* SHViewController.m */,
+				22AF35FB16FA744C005CBB62 /* SHSampleViewController.h */,
+				22AF35FC16FA744C005CBB62 /* SHSampleViewController.m */,
+				22AF360416FE14BA005CBB62 /* SHOmniAuthViewController.h */,
+				22AF360516FE14BA005CBB62 /* SHOmniAuthViewController.m */,
 				22FF672116F0E1D500F1B5DE /* Supporting Files */,
 			);
 			path = SHAccountManagerExample;
-			sourceTree = "<group>";
+			sourceTree = SOURCE_ROOT;
 		};
 		22FF672116F0E1D500F1B5DE /* Supporting Files */ = {
 			isa = PBXGroup;
@@ -135,6 +170,25 @@
 			children = (
 				22FF674316F0E26100F1B5DE /* SHAccountManager.h */,
 				22FF674416F0E26100F1B5DE /* SHAccountManager.m */,
+				22AF35F216FA6BA4005CBB62 /* SHAccountStore.h */,
+				22AF35F316FA6BA4005CBB62 /* SHAccountStore.m */,
+				22AF35F816FA6BC9005CBB62 /* SHAccountCredential.h */,
+				22AF35F916FA6BC9005CBB62 /* SHAccountCredential.m */,
+				22AF35F516FA6BB7005CBB62 /* SHAccountType.h */,
+				22AF35F616FA6BB7005CBB62 /* SHAccountType.m */,
+				22AF35EF16FA6B93005CBB62 /* SHAccount.h */,
+				22AF35F016FA6B93005CBB62 /* SHAccount.m */,
+				22AF360116FE0230005CBB62 /* SHOmniAuth.h */,
+				22AF360216FE0232005CBB62 /* SHOmniAuth.m */,
+				22AF360A16FE57D8005CBB62 /* SHOmniAuthProvider.h */,
+				2220766F1702E2D400C1FEDD /* SHOmniAuthProviderPrivates.h */,
+				22AF360D16FE6491005CBB62 /* SHOmniAuthLinkedIn.h */,
+				22AF360E16FE6492005CBB62 /* SHOmniAuthLinkedIn.m */,
+				22AF361016FE841D005CBB62 /* SHOmniAuthTwitter.h */,
+				22AF361116FE841E005CBB62 /* SHOmniAuthTwitter.m */,
+				22AF360716FE5368005CBB62 /* SHRequest.h */,
+				22AF360816FE5368005CBB62 /* SHRequest.m */,
+				22FF672016F0E1D500F1B5DE /* SHAccountManagerExample */,
 			);
 			path = SHAccountManager;
 			sourceTree = "<group>";
@@ -229,6 +283,16 @@
 				22FF672B16F0E1D500F1B5DE /* SHAppDelegate.m in Sources */,
 				22FF673A16F0E1D500F1B5DE /* SHViewController.m in Sources */,
 				22FF674516F0E26100F1B5DE /* SHAccountManager.m in Sources */,
+				22AF35F116FA6B93005CBB62 /* SHAccount.m in Sources */,
+				22AF35F416FA6BA4005CBB62 /* SHAccountStore.m in Sources */,
+				22AF35F716FA6BB7005CBB62 /* SHAccountType.m in Sources */,
+				22AF35FA16FA6BC9005CBB62 /* SHAccountCredential.m in Sources */,
+				22AF35FD16FA744C005CBB62 /* SHSampleViewController.m in Sources */,
+				22AF360316FE0233005CBB62 /* SHOmniAuth.m in Sources */,
+				22AF360616FE14BA005CBB62 /* SHOmniAuthViewController.m in Sources */,
+				22AF360916FE5369005CBB62 /* SHRequest.m in Sources */,
+				22AF360F16FE6492005CBB62 /* SHOmniAuthLinkedIn.m in Sources */,
+				22AF361216FE841F005CBB62 /* SHOmniAuthTwitter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
