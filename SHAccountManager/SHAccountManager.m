@@ -24,6 +24,7 @@
 
 @property(nonatomic, readonly) NSString * twitterConsumerKey;
 @property(nonatomic, readonly) NSString * twitterConsumerSecret;
+@property (nonatomic) NSString *twitterCallbackUrl;
 
 @end
 
@@ -50,6 +51,11 @@
 
 +(void)registerTwitterAppKey:(NSString *)theAppKey andAppSecret:(NSString *)theAppSecret; {
   [TWAPIManager registerTwitterAppKey:theAppKey andAppSecret:theAppSecret];
+}
+
++(void)registerTwitterCallbackUrl:(NSString *)urlString
+{
+  [[self class] sharedManager].twitterCallbackUrl = urlString;
 }
 
 #pragma mark -
@@ -158,7 +164,7 @@
   
   [twitterClient authorizeUsingOAuthWithRequestTokenPath:@"oauth/request_token"
                                    userAuthorizationPath:@"oauth/authorize"
-                                             callbackURL:[NSURL URLWithString:@"af-twitter://success"]
+                                             callbackURL:[NSURL URLWithString:self.twitterCallbackUrl]
                                          accessTokenPath:@"oauth/access_token"
                                             accessMethod:@"POST" success:^(AFOAuth1Token *accessToken) {
 
