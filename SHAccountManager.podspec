@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "SHAccountManager"
-  s.version      = "0.1.0"
+  s.version      = "0.2.0"
   s.summary      = "Account manager to deal with remote accounts. Use ACAccount or hit OAuth provider (supports Reverse Auth). Currently only uses Twitter."
   s.description  = <<-DESC
   A block based account handler for dealing with remote accounts and storing them on the device.
@@ -13,7 +13,7 @@ Pod::Spec.new do |s|
   s.license      = { :type => 'MIT', :file => 'LICENSE.md' }
   s.author       = { "Seivan Heidari" => "seivan.heidari@icloud.com" }
 
-  s.source       = { :git => "https://github.com/seivan/SHAccountManager.git", :tag => '0.1.0'}
+  s.source       = { :git => "https://github.com/seivan/SHAccountManager.git", :tag => '0.2.0'}
   s.platform     = :ios, '6.0'
 
 
