@@ -22,6 +22,7 @@ typedef void(^SHAccountErrorHandler)(NSError * error);
 @property(nonatomic,readonly) NSArray  * accountsTwitter;
 
 +(void)registerTwitterAppKey:(NSString *)theAppKey andAppSecret:(NSString *)theAppSecret;
++(void)registerTwitterCallbackUrl:(NSString *)urlString;
 -(void)authenticateWithTwitterForAccount:(SHTwitterAuthenticationHandler)theAccountRequirementBlock
                                onSuccess:(void (^)(NSDictionary * params))onSuccessBlock
                                onFailure:(SHAccountErrorHandler)onFailureBlock;
